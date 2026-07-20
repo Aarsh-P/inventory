@@ -19,20 +19,8 @@
       "destination": "backend/src/server.ts"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "frontend/assets/:path*"
-    },
-    {
-      "source": "/favicon.svg",
-      "destination": "frontend/favicon.svg"
-    },
-    {
-      "source": "/icons.svg",
-      "destination": "frontend/icons.svg"
-    },
-    {
-      "source": "/((?!api).*)" ,
-      "destination": "frontend/index.html"
+      "source": "/((?!api).*)",
+      "destination": "/index.html"
     }
   ],
   "cleanUrls": true
