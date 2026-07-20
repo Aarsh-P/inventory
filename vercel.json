@@ -13,27 +13,17 @@
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/:path*",
-      "destination": "backend/src/server.ts"
+      "src": "/api/(.*)",
+      "dest": "backend/src/server.ts"
     },
     {
-      "source": "/assets/:path*",
-      "destination": "frontend/assets/:path*"
+      "handle": "filesystem"
     },
     {
-      "source": "/favicon.svg",
-      "destination": "frontend/favicon.svg"
-    },
-    {
-      "source": "/icons.svg",
-      "destination": "frontend/icons.svg"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "frontend/index.html"
+      "src": "/(.*)",
+      "dest": "frontend/index.html"
     }
-  ],
-  "cleanUrls": true
+  ]
 }
